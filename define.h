@@ -4,12 +4,12 @@
 
 
 #ifdef use_int
-	#define my_type int
+	#define value_type int
 #else defined(use_float)
-	#define my_type float
+	#define value_type float
 #endif
 
 
-my_type factorial(my_type value);
+value_type factorial(value_type value);
 void compiler_version();
 void os_version();

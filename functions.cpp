@@ -3,10 +3,10 @@
 
 #include "define.h"
 
-my_type factorial(my_type value)
+value_type factorial(value_type value)
 {
 	if (value < 1) return -1;
-	if (value <= 1) return 1;
+	if (value == 1) return 1;
 	return tgamma(value+1);
 }
 

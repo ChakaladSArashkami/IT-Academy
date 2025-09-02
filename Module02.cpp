@@ -5,7 +5,7 @@
 
 int main()
 {
-	my_type num{ 0 };
+	value_type num{ 0 };
 	std::cout << "Write your number!" << std::endl;
 	while (true)
 	{

@@ -50,13 +50,13 @@ int main()
             if (counter_value_p1 > 50)
             {
                 std::cout << "Player 1 wins!" << std::endl << "!Congratulations!" << std::endl;
-                break;
+                return 0;
             }
             counter_value_p2 += player_2();
             if (counter_value_p2 > 50)
             {
                 std::cout << "Player 2 wins!" << std::endl << "!Congratulations!" << std::endl;
-                break;
+                return 0;
             }
         }
         std::cout << "DRAW" << std::endl;

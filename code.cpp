@@ -1,8 +1,4 @@
 #include <iostream>
-#include <cstdio>
-#include <cstdlib>
-#include <algorithm>
-#include <memory>
 
 #include "functional.h"
 
@@ -21,7 +17,15 @@ void reverse_string(char* str)
 		str[i] = str[len - i - 1];
 		str[len - i - 1] = letter;
 	}
-	std::cout << "Reverse: " << str << std::endl;
+}
+
+void read_reverse()
+{ 
+	char str[100];
+	std::cout << "Type your word: ";
+	std::cin.getline(str, 100);
+	reverse_string(str);
+	std::cout << str << std::endl;
 }
 
 void max_min(std::unique_ptr<int[]>& ptr)

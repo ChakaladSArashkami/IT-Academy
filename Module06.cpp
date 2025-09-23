@@ -1,19 +1,12 @@
 ﻿#include <iostream>
-#include <cstdio>
 #include <vector>
-#include <cstdlib>
 #include <algorithm>
-#include <memory>
 
 #include "functional.h"
 
 int main()
 {
-	char str[100];
-	std::cout << "Type your word: ";
-	std::cin.getline(str, 100);
-	reverse_string(str);
-
+	read_reverse();
 
 	int** matr = new int* [3] {};
 	for (int i = 0;i < 3;i++)
@@ -40,6 +33,7 @@ int main()
 		std::cout << vec[i] << " ";
 	}
 	std::cout << std::endl;
+
 	std::sort(vec.begin(), vec.end());
 	for (int i = 0;i < 10;i++)
 		std::cout << vec[i] << " ";

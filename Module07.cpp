@@ -13,7 +13,7 @@ int main()
 
 	std::cout << "Enter array size for shared ptr: ";
 	std::cin >> size;
-	auto ptr2 = create_arr_sahr(size);
+	auto ptr2 = create_arr_shar(size);
 	enter_arr(ptr2, size);
 	print_arr(ptr2, size);
 

@@ -11,7 +11,7 @@ std::unique_ptr<int[]> create_arr_uniq(int size)
 	return std::unique_ptr<int[]>(new int[size]);
 }
 
-std::shared_ptr<int[]> create_arr_sahr(int size) 
+std::shared_ptr<int[]> create_arr_shar(int size) 
 {
 	if (size <= 0) {
 		std::cout << "Invalid size shared!" << std::endl;

@@ -1,7 +1,8 @@
 #pragma once
+#include <vector>
 
 std::unique_ptr<int[]> create_arr_uniq(int size);
-std::shared_ptr<int[]> create_arr_sahr(int size);
+std::shared_ptr<int[]> create_arr_shar(int size);
 
 void enter_arr(std::unique_ptr<int[]>& arr, int size);
 void enter_arr(std::shared_ptr<int[]>& arr, int size);

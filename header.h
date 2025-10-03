@@ -1,4 +1,5 @@
 #pragma once
 
 int random();
-int player(int counter);
+int step(int counter);
+void check(int points, int num);

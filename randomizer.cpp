@@ -7,11 +7,11 @@ int random()
 {
 	std::random_device rd; // obtain a random number from hardware
 	std::mt19937 gen(rd()); // seed the generator
-	std::uniform_int_distribution<> distr(0, 5); // define the range
+	std::uniform_int_distribution<> distr(0, 50); // define the range
 	return distr(gen);
 }
 
-int player(int counter)
+int step(int counter)
 {
 	if (counter%2==0)
 	{
@@ -20,5 +20,14 @@ int player(int counter)
 	else
 	{
 		return -random();
+	}
+}
+
+void check(int points,int num)
+{
+	if (points > 50)
+	{
+		std::cout << "Player "<<num<<" wins!" << std::endl << "!Congratulations!" << std::endl;
+		exit;
 	}
 }

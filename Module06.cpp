@@ -1,6 +1,5 @@
 ﻿#include <iostream>
 #include <vector>
-#include <algorithm>
 
 #include "functional.h"
 
@@ -8,46 +7,21 @@ int main()
 {
 	read_reverse();
 
-	int** matr = new int* [3] {};
-	for (int i = 0;i < 3;i++)
-		matr[i] = new int [3];
-	for (int i = 0;i < 3;i++)
-	{
-		for (int j = 0;j < 3;j++)
-		{
-			matr[i][j] = i * j;
-			std::cout << matr[i][j] << " ";
-		}
-		std::cout << std::endl;
-	}
-	for (int i = 0;i < 3;i++)
-		delete matr[i];
-	delete[] matr;
-	matr = nullptr;
+	create_matrix();
 
+	const int size = 10;
+	std::vector<int> vector;
 
-	std::vector<int> vec;
-	for (int i = 0;i < 10;i++)
-	{
-		vec.push_back(1 + rand() % (100));
-		std::cout << vec[i] << " ";
-	}
-	std::cout << std::endl;
+	create_rand_vec(vector, size);
+	show_vec(vector);
 
-	std::sort(vec.begin(), vec.end());
-	for (int i = 0;i < 10;i++)
-		std::cout << vec[i] << " ";
-	std::cout << std::endl;
+	sort_vec(vector);
+	show_vec(vector);
 
+	auto ptr1 = std::make_unique<int[]>(size);
+	enter_arr(ptr1, size);
 
-	auto ptr1 = std::make_unique<int[]>(10);
-	std::cout << "Inter your value" << std::endl;
-	for (int i = 0;i < 10;i++)
-		std::cin >> ptr1[i];
+	max_min(ptr1,size);
 
-	max_min(ptr1);
-
-	for (int i = 0;i < 10;i++)
-		std::cout << ptr1[i]<<" ";
-	std::cout << std::endl;
+	show_arr(ptr1, size);
 }

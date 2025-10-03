@@ -23,9 +23,17 @@ namespace Shapes
 	void str_shape(std::string word)
 	{
 		Shape figure{};
-		if (word == "circle")figure = Shape::CIRCLE;
-		else if (word == "square")figure = Shape::SQUARE;
-		else if (word == "triangle")figure = Shape::TRIANGLE;
+		if (word == "circle")
+			figure = Shape::CIRCLE;
+		else if (word == "square")
+			figure = Shape::SQUARE;
+		else if (word == "triangle")
+			figure = Shape::TRIANGLE;
+		else
+		{
+			std::cout << "Wrong input!" << std::endl;
+			return;
+		}
 		print_shape(figure);
 	}
 }
